@@ -19,7 +19,7 @@ export const SORT = "SORT"
 
 export const getAllCountries = () => {
     return async function(dispatch){
-        const apiData = await axios.get('http://localhost:3001/countries');
+        const apiData = await axios.get('/countries');
         const countries = apiData.data;
         console.log(countries)
         dispatch({type:GET_ALL_COUNTRIES, payload:countries})
@@ -39,7 +39,7 @@ export const getAllCountries = () => {
 
 export const countryById = (id)=>{
     return async function(dispatch){
-        const apiData = await axios.get(`http://localhost:3001/countries/${id}`)
+        const apiData = await axios.get(`/countries/${id}`)
         const countrie = apiData.data;
         dispatch({type:COUNTRY_BY_ID, payload:countrie})
     }
@@ -48,7 +48,7 @@ export const countryById = (id)=>{
 
 export const countryByName = (name)=>{
     return async function(dispatch){
-        const apiData = await axios.get(`http://localhost:3001/countries?name=${name}`)
+        const apiData = await axios.get(`/countries?name=${name}`)
         const nameCountry = apiData.data;
         dispatch({type:COUNTRY_BY_NAME, payload:nameCountry})
     }
@@ -57,7 +57,7 @@ export const countryByName = (name)=>{
 
 export const getAllActivities = () =>{
     return async function (dispatch){
-        const apiData = await axios.get('http://localhost:3001/activities')
+        const apiData = await axios.get('/activities')
         const activities = apiData.data;
         dispatch({type:GET_ALL_ACTIVITIES, payload:activities})
     }
@@ -66,7 +66,7 @@ export const getAllActivities = () =>{
 
 export const createActivities = (form) =>{
     return async function (dispatch){
-        const newActivity = await axios.post('http://localhost:3001/activities',form)
+        const newActivity = await axios.post('/activities',form)
         
         console.log(newActivity)
         return newActivity
