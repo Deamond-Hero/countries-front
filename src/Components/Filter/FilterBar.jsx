@@ -1,13 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import style from "./FilterBar.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef,  } from "react";
 import {
   getAllCountries,
   getAllActivities,
-  filterByContinent,
-  filterByActivities,
-  filterByName,
-  sort,
 } from "../../redux/actions";
 import SearchBar from "../SearchBar/Searchbar";
 

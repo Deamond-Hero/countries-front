@@ -4,7 +4,6 @@ import {
   COUNTRY_BY_ID,
   FILTER_BY_ACTIVITIES,
   FILTER_BY_CONTINENT,
-  FILTER_BY_NAME,
   SORT,
   COUNTRY_BY_NAME,
 } from "./actions";

@@ -1,8 +1,6 @@
-import { useSelector } from "react-redux";
 import style from "./Paginated.module.css";
 
 const Paginated = (props) => {
-  const countries = useSelector((state) => state.countriesFilter);
 
   return (
     <div className={style.PaginatedContainer}>

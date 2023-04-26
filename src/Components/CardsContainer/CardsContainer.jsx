@@ -3,7 +3,6 @@ import Card from "../Card/Card";
 import Paginated from "../Paginated/Paginated";
 import FilterBar from "../Filter/FilterBar";
 import style from "./CardsContainer.module.css";
-import SearchBar from "../SearchBar/Searchbar";
 import { useEffect, useState } from "react";
 import {
   getAllCountries,
@@ -122,7 +121,6 @@ const CardsContainer = (props) => {
 
   const prevHandler = () => {
 
-    const prevPage = currentPage - 1;
 
     const prevFirstIndex = firstIndexPerPage - 10;
 

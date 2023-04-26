@@ -97,25 +97,25 @@ const Create = () => {
         setErrors({ ...errors, dificulty: "" })
       }
     };
-    const validateCountries = (form) => {
-    if (form.countries === "Select Countries" || !form.countries[0]) {
-      setErrors({ ...errors, countries: "You Need add countries"  && submitErrors.push(errors.countries)})
-    } else {
-      setErrors({ ...errors, countries: "" })
-    }
-  if (
-    cardsCountries.length &&
-    cardsCountries.forEach((e) => e.Activities.name.includes(form.name))
-  ) {
-    setErrors({
-      ...errors,
-      countries: "The country already has that activity created",
-    });
-  }
-  else {
-    setErrors({ ...errors, countries: "" })
-  }
-}
+//     const validateCountries = (form) => {
+//     if (form.countries === "Select Countries" || !form.countries[0]) {
+//       setErrors({ ...errors, countries: "You Need add countries"  && submitErrors.push(errors.countries)})
+//     } else {
+//       setErrors({ ...errors, countries: "" })
+//     }
+//   if (
+//     cardsCountries.length &&
+//     cardsCountries.forEach((e) => e.Activities.name.includes(form.name))
+//   ) {
+//     setErrors({
+//       ...errors,
+//       countries: "The country already has that activity created",
+//     });
+//   }
+//   else {
+//     setErrors({ ...errors, countries: "" })
+//   }
+// }
 
   const validateSeason = (form) => {
     if (form.season === "Select Season" || form.season === "") {
