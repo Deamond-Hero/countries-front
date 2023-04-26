@@ -4,13 +4,12 @@ import Footer from "./Components/Footer/Footer.jsx";
 import { Route, useLocation } from "react-router-dom";
 import axios from "axios";
 
-axios.defaults.baseURL = 'https://countries-back-production-a139.up.railway.app/' 
 
 
 function App() {
+  axios.defaults.baseURL = 'https://countries-back-production-a139.up.railway.app/' 
   const location = useLocation();
 
-  axios.defaults.baseURL = 'https://countries-back-production-a139.up.railway.app/' 
 
   return (
     <div className="App">
